@@ -1,4 +1,4 @@
-package com.atom.netty.example;
+package com.atom.netty.secondexample.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,25 +9,27 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 /**
  * @author Atom
  */
-public class TestServer {
-    public static void main(String[] args) throws InterruptedException {
+public class MyServer {
+
+    public static void main(String[] args) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
+            //服务端使用ServerBootstrap
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            final ChannelFuture channelFuture = serverBootstrap
-                    .group(bossGroup, workerGroup)
+            serverBootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new TestServerInitializer())
-                    .bind(8899)
-                    .sync();
+                    .childHandler(new MyServerInitializer());
+
+            ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
+
+
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
+
         }
-
-
     }
 }

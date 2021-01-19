@@ -1,4 +1,4 @@
-package com.atom.netty.example;
+package com.atom.netty.firstexample;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
