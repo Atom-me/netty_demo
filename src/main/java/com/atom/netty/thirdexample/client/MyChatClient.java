@@ -29,6 +29,7 @@ public class MyChatClient {
                     .sync()
                     .channel();
 
+            // 死循环，接收用户终端输入
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             for (; ; ) {
                 channel.writeAndFlush(br.readLine() + "\r\n");
