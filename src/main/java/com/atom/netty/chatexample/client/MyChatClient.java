@@ -1,4 +1,4 @@
-package com.atom.netty.fourthexample.client;
+package com.atom.netty.chatexample.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 /**
  * @author Atom
  */
-public class MyClient {
+public class MyChatClient {
     public static void main(String[] args) throws Exception {
 
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
@@ -22,7 +22,7 @@ public class MyClient {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(eventLoopGroup)
                     .channel(NioSocketChannel.class)
-                    .handler(new MyClientInitializer());
+                    .handler(new MyChatClientInitializer());
 
             Channel channel = bootstrap
                     .connect("localhost", 8899)

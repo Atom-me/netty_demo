@@ -1,4 +1,4 @@
-package com.atom.netty.fourthexample.server;
+package com.atom.netty.beatexample.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

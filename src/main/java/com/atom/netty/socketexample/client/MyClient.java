@@ -1,4 +1,4 @@
-package com.atom.netty.secondexample.client;
+package com.atom.netty.socketexample.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

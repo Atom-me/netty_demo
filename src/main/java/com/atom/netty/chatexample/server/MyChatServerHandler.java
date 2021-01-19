@@ -1,4 +1,4 @@
-package com.atom.netty.thirdexample.server;
+package com.atom.netty.chatexample.server;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;

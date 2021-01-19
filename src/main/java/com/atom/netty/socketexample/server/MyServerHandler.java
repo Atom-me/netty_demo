@@ -1,4 +1,4 @@
-package com.atom.netty.secondexample.server;
+package com.atom.netty.socketexample.server;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

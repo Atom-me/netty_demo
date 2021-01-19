@@ -1,4 +1,4 @@
-package com.atom.netty.secondexample.server;
+package com.atom.netty.chatexample.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,7 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 /**
  * @author Atom
  */
-public class MyServer {
+public class MyChatServer {
 
     public static void main(String[] args) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -20,7 +20,7 @@ public class MyServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new MyServerInitializer());
+                    .childHandler(new MyChatServerInitializer());
 
             ChannelFuture channelFuture = serverBootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();

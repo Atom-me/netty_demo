@@ -1,4 +1,4 @@
-package com.atom.netty.thirdexample.client;
+package com.atom.netty.chatexample.client;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
