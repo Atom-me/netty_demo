@@ -16,7 +16,6 @@ public class ThriftClient {
     public static void main(String[] args) {
         TTransport transport = new TFramedTransport(new TSocket("localhost", 8899), 600);
         TProtocol protocol = new TCompactProtocol(transport);
-
         PersonService.Client client = new PersonService.Client(protocol);
 
         try {
