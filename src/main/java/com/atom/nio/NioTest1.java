@@ -11,6 +11,8 @@ public class NioTest1 {
         //分配一个大小为10的缓冲区
         IntBuffer buffer = IntBuffer.allocate(10);
 
+        System.out.println("capacity:"+buffer.capacity());
+
         //往buffer里面放 10个随机数
         for (int i = 0; i < buffer.capacity(); i++) {
             int randomNumber = new SecureRandom().nextInt(20);
