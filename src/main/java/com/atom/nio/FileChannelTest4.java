@@ -10,7 +10,7 @@ import java.nio.channels.FileChannel;
  *
  * @author Atom
  */
-public class NioTest4 {
+public class FileChannelTest4 {
     public static void main(String[] args) throws Exception {
         FileInputStream fileInputStream = new FileInputStream("input.txt");
         FileOutputStream fileOutputStream = new FileOutputStream("output.txt");

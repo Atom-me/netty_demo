@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
  *
  * @author Atom
  */
-public class NioTest5 {
+public class ByteBufferGetPutTest5 {
     public static void main(String[] args) {
         ByteBuffer buffer = ByteBuffer.allocate(64);
 
