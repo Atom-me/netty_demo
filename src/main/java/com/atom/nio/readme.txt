@@ -26,3 +26,10 @@ position:
 大小关系：
 0 <= mark  <= position <= limit <= capacity
 
+
+通过NIO读取文件涉及到3个步骤：
+1。从FileInputStream获取到FileChannel对象
+2。创建Buffer
+3。将数据从Channel读取到Buffer中。
+
+
