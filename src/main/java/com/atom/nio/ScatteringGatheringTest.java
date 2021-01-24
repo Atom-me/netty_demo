@@ -11,6 +11,16 @@ import java.nio.channels.SocketChannel;
 import java.util.Arrays;
 
 /**
+ * Java NIO开始支持scatter/gather，scatter/gather用于描述从Channel中读取或者写入到Channel的操作。
+ * <p>
+ * 分散(scatter): 从Channel中读取数据，"分散"的写入到多个Buffer中。
+ * <p>
+ * 聚集(gather): 从多个Buffer中读取数据"聚集"在一起，写入到一个Channel中。
+ * <p>
+ * scatter / gather经常用于需要将传输的数据分开处理的场合，例如传输一个由消息头和消息体组成的消息，
+ * <p>
+ * 你可能会将消息体和消息头分散到不同的buffer中，这样你可以方便的处理消息头和消息体。
+ *
  * @author Atom
  */
 public class ScatteringGatheringTest {
