@@ -22,6 +22,8 @@ public class FileLockTest {
         System.out.println("fileLock 是否有效：" + fileLock.isValid());
         System.out.println("文件锁是否是共享锁：" + fileLock.isShared());
 
+        fileLock.release();
+        randomAccessFile.close();
 
     }
 }
