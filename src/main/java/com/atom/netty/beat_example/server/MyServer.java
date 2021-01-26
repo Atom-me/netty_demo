@@ -9,6 +9,8 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 /**
+ * IdleStateEvent 心跳检测
+ *
  * @author Atom
  */
 public class MyServer {
