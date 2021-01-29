@@ -12,6 +12,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class MyServer {
 
     public static void main(String[] args) throws Exception {
+        // bossGroup 接收客户端的连接，连接建立好之后，bossGroup 不会对其做任何处理，将相应的处理逻辑转给 workerGroup
+        // EventLoopGroup 本身就是一个死循环
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
